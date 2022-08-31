@@ -66,7 +66,7 @@ namespace AppHotel.View
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
-            bool confirme = await DisplayAlert("Tem certeza?", "Desconectar sua conta", "SIM", "NÃO");
+            bool confirme = await DisplayAlert("Desconectar", "Tem certeza que deseja desconectar de sua conta?", "SIM", "NÃO");
 
             if (confirme)
             {
