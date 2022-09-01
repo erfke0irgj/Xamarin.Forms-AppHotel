@@ -9,5 +9,21 @@
             <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
         </Style>
 
+        <Style x:Key="Textobranco" TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+
+        <Style x:Key="lbl" TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+
+        <Style x:Key="fonteCustomizada" TargetType="Label" BaseResourceKey="Textobranco">
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String" Android="IndieFlower-Regular.ttf#IndieFlower-Regular" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>

@@ -2,24 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppHotel.View.Login"
-             BackgroundColor="DarkOliveGreen">
+             BackgroundColor="#23272a">
     
     <ContentPage.Content>
         <StackLayout>
-            <Frame CornerRadius="10"
-                   Margin="20"
-                   VerticalOptions="CenterAndExpand"
-                   Padding="10">
+
+            <Label Text="Hotel :>" FontSize="80" HorizontalTextAlignment="Center" Margin="0, 20, 0, 50" Style="{StaticResource fonteCustomizada}"/>
+
+            <Label Text="Login" FontSize="30" HorizontalTextAlignment="Center" Margin="10, 0, 0, 0" />
+
+            <Frame CornerRadius="20"
+                   Margin="20, 0, 20, 0"
+                   VerticalOptions="StartAndExpand"
+                   Padding="20, 80, 20, 20">
 
                 <StackLayout>
-                    <Label Text="LOGIN" FontSize="Title"
-                           HorizontalTextAlignment="Center"/>
-
-                    <Label Text="Usuário:" />
+                    <Label Text="Usuário:" Style="{StaticResource lbl}" />
                     <Entry x:Name="txt_usuario" />
-                    <Label Text="Senha:" />
+                    <Label Text="Senha:" Style="{StaticResource lbl}" />
                     <Entry IsPassword="True" x:Name="txt_senha" />
-                    <Button Text="Entrar" Clicked="Button_Clicked" />
+                    <Button Text="Entrar" Margin="0, 100, 0, 0" Clicked="Button_Clicked" />
                 </StackLayout>
             </Frame>
         </StackLayout>

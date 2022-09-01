@@ -38,9 +38,9 @@
                     <Label Grid.Row="0" Grid.Column="1" Text="Data checkout: " />
                     <Label Grid.Row="0" Grid.Column="2" Text="Estadia: " />
 
-                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" />
-                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" />
-                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}" />
+                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="DarkRed" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="DarkRed" />
+                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}" TextColor="DarkRed" />
                 </Grid>
             </Frame>
 
@@ -49,7 +49,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Valor da hospedagem: " />
-                            <Span Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" FontSize="Title" />
+                            <Span Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" FontSize="Title" TextColor="DarkRed" FontAttributes="Bold"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>

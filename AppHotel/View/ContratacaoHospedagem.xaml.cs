@@ -38,14 +38,14 @@ namespace AppHotel.View
 
             dtpck_checkout.MinimumDate = elemento.Date.AddDays(1);
             dtpck_checkout.MaximumDate = elemento.Date.AddMonths(6).AddDays(1);
-
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+
             try
             {
-                Navigation.PushAsync(new HospedagemCalculada()
+                App.Current.MainPage = new HospedagemCalculada();
                 {
                     BindingContext = new Hospedagem()
                     {
@@ -54,8 +54,8 @@ namespace AppHotel.View
                         QuartoEscolhido = (Suite)pck_suite.SelectedItem,
                         DataCheckIn = dtpck_checkin.Date,
                         DataCheckOut = dtpck_checkout.Date
-                    }
-                });
+                    };
+                };
             }
             catch (Exception ex)
             {
