@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Xamarin.Forms;
-
 namespace AppHotel.Model
 {
     public class Hospedagem
@@ -48,7 +46,10 @@ namespace AppHotel.Model
         }
         public double ValorTotal
         {
-            get => ((QntAdultos * QuartoEscolhido.DiariaAdulto) + (QntCriancas * QuartoEscolhido.DiariaCrianca)) * Estadia;
+            get
+            {
+                return ((QntAdultos * QuartoEscolhido.DiariaAdulto) + (QntCriancas * QuartoEscolhido.DiariaCrianca)) * Estadia;
+            }
         }
     }
 }

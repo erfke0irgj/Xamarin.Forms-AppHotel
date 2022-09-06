@@ -9,21 +9,21 @@
 
             <Label Text="Hotel :>" FontSize="80" HorizontalTextAlignment="Center" Margin="0, 20, 0, 50" Style="{StaticResource fonteCustomizada}"/>
 
-            <Label Text="Login" FontSize="30" HorizontalTextAlignment="Center" Margin="10, 0, 0, 0" />
+            <Label Text="Login" FontSize="50" HorizontalTextAlignment="Center" Margin="0, 0, 0, 20" Style="{StaticResource fonteCustomizada}" />
 
             <Frame CornerRadius="20"
                    Margin="20, 0, 20, 0"
                    VerticalOptions="StartAndExpand"
-                   Padding="20, 80, 20, 20">
+                   Padding="20, 30, 20, 40">
 
                 <StackLayout>
-                    <Label Text="Usuário:" Style="{StaticResource lbl}" />
+                    <Label Text="Usuário:" FontSize="20" />
                     <Entry x:Name="txt_usuario" />
-                    <Label Text="Senha:" Style="{StaticResource lbl}" />
+                    <Label Text="Senha:" FontSize="20" />
                     <Entry IsPassword="True" x:Name="txt_senha" />
-                    <Button Text="Entrar" Margin="0, 100, 0, 0" Clicked="Button_Clicked" />
                 </StackLayout>
             </Frame>
+            <Button Text="Entrar" Margin="0, 50, 0, 100" Clicked="Button_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

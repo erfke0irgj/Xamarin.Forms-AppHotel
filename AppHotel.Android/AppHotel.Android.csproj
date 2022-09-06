@@ -63,9 +63,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\PatrickHand-Regular.ttf" />
-    <AndroidAsset Include="Assets\Kanit-Medium.ttf" />
     <AndroidAsset Include="Assets\IndieFlower-Regular.ttf" />
+    <AndroidAsset Include="Assets\Mali-Regular.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

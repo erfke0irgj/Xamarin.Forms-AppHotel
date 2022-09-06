@@ -4,26 +4,39 @@
              x:Class="AppHotel.App">
     <Application.Resources>
         <Style TargetType="Button">
-            <Setter Property="BackgroundColor" Value="DarkRed" />
+            <Setter Property="BackgroundColor" Value="Black" />
             <Setter Property="TextColor" Value="White" />
             <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
-        </Style>
-
-        <Style x:Key="Textobranco" TargetType="Label">
-            <Setter Property="TextColor" Value="White" />
-        </Style>
-
-        <Style x:Key="lbl" TargetType="Label">
+            <Setter Property="WidthRequest" Value="150" />
             <Setter Property="FontSize" Value="20" />
+            <Setter Property="CornerRadius" Value="10" />
         </Style>
 
-        <Style x:Key="fonteCustomizada" TargetType="Label" BaseResourceKey="Textobranco">
+        <Style x:Key="fonteCustomizada" TargetType="Label">
             <Setter Property="FontFamily">
                 <Setter.Value>
                     <OnPlatform x:TypeArguments="x:String" Android="IndieFlower-Regular.ttf#IndieFlower-Regular" />
                 </Setter.Value>
             </Setter>
+            <Setter Property="TextColor" Value="White"/>
         </Style>
 
+        <Style TargetType="Label">
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String" Android="Mali-Regular.ttf#Mali-Regular" />
+                </Setter.Value>
+            </Setter>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="fonteCustomizada2">
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String" Android="Mali-Regular.ttf#Mali-Regular" />
+                </Setter.Value>
+            </Setter>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
     </Application.Resources>
 </Application>

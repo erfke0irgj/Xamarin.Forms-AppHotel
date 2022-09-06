@@ -5,38 +5,39 @@
              BackgroundColor="#23272a">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Cálculo da Hospedagem"
+            <Label Text="Cálculo da hospedagem" Style="{StaticResource fonteCustomizada}"
                    HorizontalTextAlignment="Center"
-                   FontSize="Title" TextColor="White"/>
+                   FontSize="35" TextColor="White"/>
 
             <Label x:Name="lbl_usuario"
                    HorizontalTextAlignment="Center"
-                   TextColor="White"/>
+                   FontSize="20"
+                   TextColor="LightGray"/>
 
-            <Frame CornerRadius="10"
+            <Frame CornerRadius="20"
                    BackgroundColor="#eee"
-                   Margin="10, 0, 10, 10"
+                   Margin="20, 0, 20, 0"
                    Padding="20">
 
                 <StackLayout>
                     <Grid ColumnDefinitions="*, *, 2*"
                           RowDefinitions="*, *">
                         <Label Grid.Row="0" Grid.Column="0"
-                               Text="Adultos:"/>
+                               Text="Adultos" FontSize="20" />
                     
-                        <Label Grid.Row="0" Grid.Column="1"
+                        <Label Grid.Row="0" Grid.Column="1" FontSize="30"
                                x:Name="lbl_qnt_adultos"
                                BindingContext="{x:Reference stepperAdultos}"
-                               Text="{Binding Value}"/>
+                               Text="{Binding Value}" FontAttributes="Bold"/>
                     
                         <Stepper Grid.Row="0" Grid.Column="2"
                                  x:Name="stepperAdultos"
                                  Minimum="0" Maximum="10" Increment="1" />
 
-                        <Label Grid.Row="1" Grid.Column="0" Text="Catarrentos" />
+                        <Label Grid.Row="1" Grid.Column="0" Text="Catarrentos" FontSize="15" />
                     
                         <Label Grid.Row="1" Grid.Column="1"
-                               x:Name="lbl_qnt_criancas"
+                               x:Name="lbl_qnt_criancas" FontSize="30" FontAttributes="Bold"
                                BindingContext="{x:Reference stepperCriancas}"
                                Text="{Binding Value}"/>
 
@@ -45,37 +46,40 @@
                                  Minimum="0" Maximum="10" Increment="1" />
                     </Grid>
 
-                    <Label Text="Escolha sua suíte" />
-                    <Picker x:Name="pck_suite"
+                    <Label Text="Escolha sua suíte" FontSize="25" Margin="0, 20, 0, -20" FontAttributes="Bold"/>
+                    <Picker x:Name="pck_suite" Style="{StaticResource fonteCustomizada2}"
                             ItemDisplayBinding="{Binding Nome}"
                             Title="Selecione sua acomodação"/>
 
                     <Frame BackgroundColor="#ddd"
-                            CornerRadius="10" Margin="10">
+                            CornerRadius="10" Margin="10, 40, 10, 10">
                         <StackLayout>
-                            <Label Text="Período da estadia" />
+                            <Label Text="Período da estadia" FontSize="25" FontAttributes="Bold"/>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="Check-in:" />
+                                <Label Text="Check-in:" FontSize="18" />
                                 <DatePicker x:Name="dtpck_checkin"
                                             DateSelected="dtpck_checkin_DateSelected"
                                             Format="dd/MM/yyyy" />
                             </StackLayout>
 
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="Check-out:" />
+                                <Label Text="Check-out:" FontSize="18" />
                                 <DatePicker x:Name="dtpck_checkout"
                                             Format="dd/MM/yyyy" />
                             </StackLayout>
                         </StackLayout>
                     </Frame>
 
-                    <Button Text="Calcular hospedagem" Clicked="Button_Clicked" />
-
-                    <Button Text="Sair" Clicked="Button_Clicked_1"
-                                TextColor="Black"
-                                BackgroundColor="#ccc" />
+                    <Button Text="Calcular" Margin="0, 30, 0, 0" Clicked="Button_Clicked" FontAttributes="Bold"/>
                 </StackLayout>
             </Frame>
+            <Button Text="Sair" Clicked="Button_Clicked_1"
+                                TextColor="White"
+                                BackgroundColor="Black"
+                                FontSize="17"
+                                WidthRequest="80"
+                                HeightRequest="40"
+                                Margin="0, 10, 0, 0"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
