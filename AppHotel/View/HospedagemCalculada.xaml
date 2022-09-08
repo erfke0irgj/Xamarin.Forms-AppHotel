@@ -11,23 +11,11 @@
 
             <Frame CornerRadius="10">
                 <StackLayout Orientation="Horizontal">
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Adultos: " FontSize="20"/>
-                                <Span Text="{Binding QntAdultos}" TextColor="DarkRed" FontSize="20" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Adultos: " FontSize="20"/>
+                    <Label Text="{Binding QntAdultos}" TextColor="DarkRed" FontSize="20" />
 
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Crianças: " FontSize="20"/>
-                                <Span Text="{Binding QntCriancas}" TextColor="DarkRed" FontSize="20" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Crianças: " FontSize="20"/>
+                    <Label Text="{Binding QntCriancas}" TextColor="DarkRed" FontSize="20" />
                 </StackLayout>
             </Frame>
 

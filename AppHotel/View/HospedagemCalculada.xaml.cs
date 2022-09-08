@@ -19,9 +19,9 @@ namespace AppHotel.View
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PopAsync();
+            await Navigation.PopAsync();
             App.Current.MainPage = new ContratacaoHospedagem();
         }
     }
