@@ -46,7 +46,7 @@ namespace AppHotel.View
 
             try
             {
-                App.Current.MainPage = new HospedagemCalculada();
+                App.Current.MainPage = new HospedagemCalculada()
                 {
                     BindingContext = new Hospedagem()
                     {
@@ -55,7 +55,7 @@ namespace AppHotel.View
                         QuartoEscolhido = (Suite)pck_suite.SelectedItem,
                         DataCheckIn = dtpck_checkin.Date,
                         DataCheckOut = dtpck_checkout.Date
-                    };
+                    }
                 };
             }
             catch (Exception ex)

@@ -7,43 +7,43 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Detalhes da estadia" HorizontalTextAlignment="Center" FontSize="30" TextColor="White"/>
-            <Label Text="{Binding Path=QuartoEscolhido.Nome}" FontSize="30" TextColor="White" />
+            <Label Text="{Binding Path=QuartoEscolhido.Nome}" FontSize="25" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" />
 
-            <Frame CornerRadius="10">
+            <Frame CornerRadius="20" Margin="20, 0, 20, 0" BackgroundColor="#eee">
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Adultos: " FontSize="20"/>
-                    <Label Text="{Binding QntAdultos}" TextColor="DarkRed" FontSize="20" />
+                    <Label Text="{Binding QntAdultos}" TextColor="Black" FontSize="25" />
 
                     <Label Text="Crianças: " FontSize="20"/>
-                    <Label Text="{Binding QntCriancas}" TextColor="DarkRed" FontSize="20" />
+                    <Label Text="{Binding QntCriancas}" TextColor="Black" FontSize="25" />
                 </StackLayout>
             </Frame>
 
-            <Frame CornerRadius="10">
+            <Frame CornerRadius="20" Margin="20, 30, 20, 0" BackgroundColor="#eee">
                 <Grid ColumnDefinitions="*, *, *" RowDefinitions="*, *">
                     <Label Grid.Row="0" Grid.Column="0" Text="Data checkin: " FontSize="20"/>
                     <Label Grid.Row="0" Grid.Column="1" Text="Data checkout: " FontSize="20" />
                     <Label Grid.Row="0" Grid.Column="2" Text="Estadia: " FontSize="20" />
 
-                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="DarkRed" FontSize="20"/>
-                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="DarkRed" FontSize="20"/>
-                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}" TextColor="DarkRed" FontSize="20"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="Black" FontSize="18"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="Black" FontSize="18"/>
+                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center"/>
                 </Grid>
             </Frame>
 
-            <Frame CornerRadius="10">
+            <Frame CornerRadius="20" Margin="20, 30, 20, 100" BackgroundColor="#eee">
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Valor da hospedagem: " FontSize="20"/>
-                            <Span Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" FontSize="Title" TextColor="DarkRed" FontAttributes="Bold"/>
+                            <Span Text="Valor da hospedagem: " FontSize="17" Style="{StaticResource fonteCustomizada2}"/>
+                            <Span Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" FontSize="30" TextColor="Black" FontAttributes="Bold" Style="{StaticResource fonteCustomizada}"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
             </Frame>
 
-            <Button Text="Voltar" Clicked="Button_Clicked" Margin="0, 150, 0, 0" 
-                    TextColor="White" BackgroundColor="Black" FontSize="17" WidthRequest="100" HeightRequest="40"/>
+            <Button Text="Voltar" Clicked="Button_Clicked" 
+                    TextColor="White" BackgroundColor="Black" FontSize="18" WidthRequest="125" HeightRequest="55" Style="{StaticResource fonteCustomizada2}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

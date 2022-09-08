@@ -23,7 +23,7 @@
                     <Entry IsPassword="True" x:Name="txt_senha" />
                 </StackLayout>
             </Frame>
-            <Button Text="Entrar" Margin="0, 50, 0, 100" Clicked="Button_Clicked" />
+            <Button Text="Entrar" Margin="0, 50, 0, 100" Clicked="Button_Clicked" Style="{StaticResource fonteCustomizada2}" TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
